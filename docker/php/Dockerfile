@@ -17,8 +17,7 @@ ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 
 RUN apt-get update \
-    && apt-get install -y libpq-dev \
-    && docker-php-ext-install pdo_mysql pdo_pgsql
+    && apt-get install -y docker-php-ext-install pdo_mysql pdo_pgsql
 
 WORKDIR /src
 

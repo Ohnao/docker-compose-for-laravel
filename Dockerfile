@@ -27,7 +27,14 @@ RUN apt-get update && \
     apt-get install php7.3-zip -y
 
 RUN apt-get install curl -y && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    chmod -R 755 /var/www && \
+    cd /var/www/html && \
+    composer create-project --prefer-dist laravel/laravel lab-axfon && \
+    chown -R www-data:www-data /var/www/html/lab-axfon/ && \
+    chmod -R 755 /var/www/html/lab-axfon/
+
+
 
 WORKDIR /src
 

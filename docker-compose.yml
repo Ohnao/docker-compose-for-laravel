@@ -12,7 +12,7 @@ services:
       - php
 
   php:
-    build: ./docker/php
+    build: ./
     expose:
       - "9000"
     volumes:

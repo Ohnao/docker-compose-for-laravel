@@ -1,5 +1,12 @@
 FROM ubuntu:18.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install software-properties-common -y && \
+    apt-add-repository ppa:ondrej/php -y && \
+    apt-get update && \
+    apt-get install php7.3 -y
 #RUN apt-get update \ 
 #    && apt-get install -y zlib1g-dev \
 #        && docker-php-ext-install zip

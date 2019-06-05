@@ -19,11 +19,11 @@ services:
       - ./src:/src
 
   mysql:
-     image: mysql
-     container_name: "laravel-mysql"
-     restart: always
-     environment:
+    image: mysql:8.0
+    container_name: "laravel-mysql"
+    restart: always
+    environment:
       MYSQL_DATABASE: root
       MYSQL_ROOT_PASSWORD: root
-     ports:
+    ports:
       - 13306:3306

@@ -17,6 +17,7 @@ services:
       - "9000"
     volumes:
       - ./src:/src
+      - ./php-conf:/etc/php/7.3/fpm/
 
   mysql:
     image: mysql:8.0

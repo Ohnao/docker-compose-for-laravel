@@ -8,6 +8,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install php7.3 -y && \
     apt-get install php7.3-fpm -y && \
+    apt-get install php7.3-cgi -y && \
     apt-get install php7.3-cli -y && \
     apt-get install php7.3-mysql -y && \
     apt-get install php7.3-gd -y && \

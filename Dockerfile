@@ -33,8 +33,6 @@ RUN apt-get install curl -y && \
     cd /var/www/html && \
     composer create-project --prefer-dist laravel/laravel project && \
     chown -R www-data:www-data /var/www/html/project/ && \
-    chmod -R 755 /var/www/html/project && \
-    service php7.3-fpm start && \
-    service php7.3-fpm restart
+    chmod -R 755 /var/www/html/project
 
 WORKDIR /var/www/html/project/

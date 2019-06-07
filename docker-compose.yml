@@ -17,8 +17,8 @@ services:
     container_name: "laravel-php"
     expose:
       - "9000"
-    volumes:
-      - ./php-conf:/etc/php/7.3/fpm/
+        #volumes:
+        #  - ./php-conf:/etc/php/7.3/fpm/
 
   mysql:
     image: mysql:8.0

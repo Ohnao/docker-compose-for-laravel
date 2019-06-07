@@ -13,11 +13,11 @@ services:
 
   php:
     build: ./
+    command: service php7.3-fpm restart
     container_name: "laravel-php"
     expose:
       - "9000"
     volumes:
-      - ./src:/src
       - ./php-conf:/etc/php/7.3/fpm/
 
   mysql:

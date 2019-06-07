@@ -13,6 +13,7 @@ services:
 
   php:
     build: ./
+    command: service php7.3-fpm restart
     container_name: "laravel-php"
     expose:
       - "9000"

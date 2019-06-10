@@ -7,13 +7,12 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./src:/var/www/html/project/public
+      - ./laravel-product:/var/www/html/project/public
     depends_on:
       - php
 
   php:
     build: ./
-    command: service php7.3-fpm start
     container_name: "laravel-php"
     expose:
       - "9000"

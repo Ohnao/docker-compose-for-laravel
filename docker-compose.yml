@@ -12,7 +12,7 @@ services:
       - php
 
   php:
-    build: ./Dockerfile
+    build: ./
     command: service php7.3-fpm start
     container_name: "laravel-php"
     expose:

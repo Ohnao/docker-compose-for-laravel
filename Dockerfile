@@ -32,6 +32,8 @@ RUN apt-get install curl -y && \
     chmod -R 755 /var/www && \
     cd /var/www/html && \
     composer create-project --prefer-dist laravel/laravel project && \
+    adduser nginx && \
+    chown -R nginx:nginx /var/lib/php/session/ && \
     chown -R www-data:www-data /var/www/html/project/ && \
     chmod -R 755 /var/www/html/project
 

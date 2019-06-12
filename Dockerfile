@@ -41,6 +41,7 @@ RUN apt-get install wget -y && \
     sysv-rc-conf php7.3-fpm on
 
 RUN apt-get install curl -y && \
+    apt-get clean && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     chmod -R 755 /var/www && \
     cd /var/www/html && \

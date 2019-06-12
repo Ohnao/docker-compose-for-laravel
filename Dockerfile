@@ -29,12 +29,12 @@ RUN apt-get update && \
 
 RUN apt-get install wget -y && \
     apt-get install make -y && \
-    apt-get install libcurses-ui-perl && \
-    apt-get install libterm-readkey-perl && \
-    apt-get install libcurses-perl && \
+    apt-get install libcurses-ui-perl -y && \
+    apt-get install libterm-readkey-perl -y && \
+    apt-get install libcurses-perl -y && \
     wget http://archive.ubuntu.com/ubuntu/pool/universe/s/sysv-rc-conf/sysv-rc-conf_0.99.orig.tar.gz && \
     tar zxvf sysv-rc-conf_0.99.orig.tar.gz && \
-    cd sysv-rc-conf-0.9 && \
+    cd sysv-rc-conf-0.99 && \
     make && \
     make install && \
     service php7.3-fpm start && \

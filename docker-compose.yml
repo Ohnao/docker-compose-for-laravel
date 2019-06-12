@@ -15,6 +15,7 @@ services:
   php:
     build: ./
     container_name: "laravel-php"
+    tty: true
     volumes:
       - ./php-conf/php.ini:/etc/php/7.3/fpm/php.ini
       - ./php-fpm-run:/var/run/php

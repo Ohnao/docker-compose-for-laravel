@@ -27,6 +27,19 @@ RUN apt-get update && \
     apt-get install php7.3-readline -y && \
     apt-get install php7.3-zip -y
 
+RUN apt-get install wget -y && \
+    apt-get install make -y && \
+    apt-get install libcurses-ui-perl && \
+    apt-get install libterm-readkey-perl && \
+    apt-get install libcurses-perl && \
+    wget http://archive.ubuntu.com/ubuntu/pool/universe/s/sysv-rc-conf/sysv-rc-conf_0.99.orig.tar.gz && \
+    tar zxvf sysv-rc-conf_0.99.orig.tar.gz && \
+    cd sysv-rc-conf-0.9 && \
+    make && \
+    make install && \
+    service php7.3-fpm start && \
+    sysv-rc-conf php7.3-fpm on
+
 RUN apt-get install curl -y && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     chmod -R 755 /var/www && \

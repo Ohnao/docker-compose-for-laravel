@@ -19,6 +19,7 @@ services:
     volumes:
       - ./php-conf/php.ini:/etc/php/7.3/fpm/php.ini
       - ./php-fpm-run:/var/run/php
+      - ./php-pool/www.conf:/etc/php/7.3/fpm/pool.d/www.conf
 
   mysql:
     image: mysql:8.0

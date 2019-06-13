@@ -47,6 +47,8 @@ RUN apt-get install curl -y && \
     cd /var/www/html && \
     composer create-project --prefer-dist laravel/laravel project && \
     chown -R www-data:www-data /var/www/html/project/ && \
-    chmod -R 755 /var/www/html/project
+    chmod -R 755 /var/www/html/project && \
+    useradd nginx && \
+    chown nginx:nginx /var/run/php/php7.3-fpm.sock
 
 WORKDIR /var/www/html/project/

@@ -7,8 +7,8 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./laravel-product:/var/www/html/project/
       - ./php-fpm-run:/var/run/php
+      - ./laravel-product:/var/www/html/project
     depends_on:
       - php
 

@@ -1,9 +1,9 @@
 # LEMP
 
-PHP               :7.3
-Laravel Framework :5.8.23
-nginx             :1.17.0
-mysql             :8.0
+- PHP               :7.3
+- Laravel Framework :5.8.23
+- nginx             :1.17.0
+- mysql             :8.0
 
 # How to use
 

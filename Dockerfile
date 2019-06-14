@@ -42,12 +42,6 @@ RUN apt-get install wget -y && \
 
 RUN apt-get install curl -y && \
     apt-get clean && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    chmod -R 755 /var/www && \
-    cd /var/www/html && \	
-    composer create-project --prefer-dist laravel/laravel project && \
-    useradd nginx && \
-    chown -R nginx:nginx /var/www/html/project/ && \
-    chmod -R 755 /var/www/html/project
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-WORKDIR /var/www/html/project/
+WORKDIR /var/www/html/

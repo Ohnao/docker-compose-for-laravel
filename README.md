@@ -1,4 +1,5 @@
 How to use
+
 0.  edit root project in nginx/nginx.conf
 1.  docker-compose build jnd docker-compose up
 2.  docker ps
